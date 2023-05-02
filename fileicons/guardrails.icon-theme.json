@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "_rails": {
+        "iconPath": "./red.svg",
+    }
+  },
+  "languageIds":{
+    "rails":"_rails"
+  }
+}

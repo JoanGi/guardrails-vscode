@@ -1,0 +1,79 @@
+{
+  "name": "rails",
+  "scopeName": "source.rails",
+  "fileTypes": [
+    ".rails"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "name": "keyword.control.rails",
+      "match": "(on-fail-choice|on-fail-exclude-sql-predicates|<integer|<list|<object|<string|description=|format=|language=|name=|on-fail-|version=|</list>|</object>)"
+    },
+    {
+      "name": "entity.name.type.class",
+      "match": "(</output>|<output>|</prompt>|</script>|<prompt>|<script>)"
+    },
+    {
+      "name": "entity.name.function",
+      "match": "(alt-profinity-check|bug-free-python|bug-free-sql|choice|ends-with|exception|exclude-sql-predicates|filter|fix|fix_reask|go|is-high-quality-translation|lenght|lowe-case|noop|one-line|others|prompt|python|rails|reask|refrain|script|similar-to-document|sql-column-presence|two-words|typescript|upper-case|valid-choices|valid-range|valid-url)"
+    },
+    {
+      "name": "string.quoted.double.rails",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "include": "#string-character-escape"
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.single.rails",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "include": "#string-character-escape"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.rails",
+          "begin": "/\\*",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.rails"
+            }
+          },
+          "end": "\\*/",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.rails"
+            }
+          }
+        },
+        {
+          "begin": "//",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.rails"
+            }
+          },
+          "end": "(?=$)",
+          "name": "comment.line.rails"
+        }
+      ]
+    },
+    "string-character-escape": {
+      "name": "constant.character.escape.rails",
+      "match": "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|u\\{[0-9A-Fa-f]+\\}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)"
+    }
+  }
+}

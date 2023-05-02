@@ -1,0 +1,17 @@
+{
+    "rails": {
+        "prefix": "RailsScaffold:",
+        "body":[
+            "<rails version=1.0>",
+            "\t <output>",
+            "\t\t // <string name=myString description='my description'>",
+            "\t </output>",
+            "\t <prompt>",
+            "\t </prompt>",
+            "\t <script>",
+            "\t </script>",
+            "</rails>"
+        ],
+        "description":"Rails scaffold"
+    }
+}

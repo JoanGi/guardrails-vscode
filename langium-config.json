@@ -1,0 +1,12 @@
+{
+    "projectName": "Rails",
+    "languages": [{
+        "id": "rails",
+        "grammar": "src/language-server/rails.langium",
+        "fileExtensions": [".rails"],
+        "textMate": {
+            "out": "syntaxes/rails.tmLanguage.json"
+        }
+    }],
+    "out": "src/language-server/generated"
+}

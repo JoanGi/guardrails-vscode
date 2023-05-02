@@ -1,0 +1,30 @@
+<rails version=1.0 > 
+    <output>  
+        <list name=myList format=choice >
+            <integer name=intList 
+                description="mydesc" 
+            format=one-line >
+        </list>
+        <object name=myObject format=ends-with>
+            <integer name=intObject
+                description="The integer of an object" 
+                format=ends-with 
+                on-fail-exclude-sql-predicates=fix_reask>
+            <string name=stringObject
+                description="The string of the object" 
+                format=exclude-sql-predicates 
+                on-fail-choice=fix_reask>
+        </object>
+    </output>
+    
+    <prompt> 
+        "Given the following document, answer the following questions. If the answer doesn't exist in the document, enter 'None'.
+        {document} 
+        @xml_prefix_prompt  
+        {{output_schema}}  
+        @json_suffix_prompt  " 
+    </prompt>
+    <script language=python> 
+        "An script" 
+    </script>
+</rails>

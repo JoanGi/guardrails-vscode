@@ -1,0 +1,81 @@
+{
+    "name": "GuardRails",
+    "displayName": "GuardRails",
+    "description": "Please enter a brief description here",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SOM-Research/DescribeML"
+    },
+    "icon": "./fileicons/requisito.png",
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rails",
+            "aliases": ["rails", "rails"],
+            "extensions": [".rails"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rails",
+            "scopeName": "source.rails",
+            "path": "./syntaxes/rails.tmLanguage.json"
+        }],
+        "iconThemes": [
+            {
+                "id": "GaurdRails",
+                "label": "GaurdRails",
+                "path": "./fileicons/guardrails.icon-theme.json"
+            }
+        ],
+        "snippets": [
+            {
+              "language": "rails",
+              "path": "./snippets.json"
+            }
+          ]
+    },
+    "activationEvents": [
+        "onLanguage:rails"
+    ],
+    "files": [
+        "bin",
+        "out",
+        "src"
+    ],
+    "bin": {
+        "rails-cli": "./bin/cli"
+    },
+    "main": "./out/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run build && npm run lint",
+        "build": "tsc -b tsconfig.json",
+        "watch": "tsc -b tsconfig.json --watch",
+        "lint": "eslint src --ext ts",
+        "langium:generate": "langium generate",
+        "langium:watch": "langium generate --watch"
+    },
+    "dependencies": {
+        "chevrotain": "~10.4.2",
+        "chalk": "~4.1.2",
+        "commander": "~10.0.0",
+        "langium": "~1.1.0",
+        "vscode-languageclient": "~8.0.2",
+        "vscode-languageserver": "~8.0.2",
+        "vscode-uri": "~3.0.7"
+    },
+    "devDependencies": {
+        "@types/node": "~16.18.11",
+        "@types/vscode": "~1.67.0",
+        "@typescript-eslint/eslint-plugin": "~5.51.0",
+        "@typescript-eslint/parser": "~5.51.0",
+        "eslint": "~8.33.0",
+        "langium-cli": "~1.1.0",
+        "typescript": "~4.9.5"
+    }
+}
