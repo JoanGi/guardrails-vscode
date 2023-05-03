@@ -4,7 +4,7 @@
 
 GuardRails for VSCode is a language plugin to help developers during the creation of the RAILS specification <br>
 
-The project is in early stage, and **is not ready for development**. Please, **help us** to improve the developer exeprience using GuardRails.
+The project is in an early stage, and **is not ready for production**. Please **help us** to improve the developer experience using GuardRails.
 
 
 If you are seeking for the **GuardRails project** this is the [repo](https://github.com/ShreyaR/guardrails) <br>
@@ -24,7 +24,7 @@ This will open a new instance of VSCode with the plugin enabled.
 
 ## Contributing
 
-This project is an open-soure project and we are open (and expecting!) to contributions from the community. If you are interested in contributing to this project, please first read the [CONTRIBUTING.md](CONTRIBUTING.md) guidelines file.
+This project is an open-source project, and we are open (and expecting!) to contributions from the community. If you are interested in contributing to this project, please first read the [CONTRIBUTING.md](CONTRIBUTING.md) guidelines file.
 
 ### Repository structure
 
